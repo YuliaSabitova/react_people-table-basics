@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 type Props = { person: Person };
 
-export const PeopleLink = ({ person }: Props) => {
+export const PersonLink = ({ person }: Props) => {
   return (
     <Link
       to={`/people/${person.slug}`}

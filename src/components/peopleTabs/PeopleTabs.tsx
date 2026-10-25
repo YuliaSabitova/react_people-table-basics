@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { Person } from '../../types';
-import { PeopleLink } from '../peopleLink/PersonLink';
+import { PersonLink } from '../peopleLink/PersonLink';
 
 type Props = { people: Person[] };
 
@@ -31,7 +31,7 @@ export const PeopleTabs = ({ people }: Props) => {
             className={slug === person.slug ? 'has-background-warning' : ''}
           >
             <td>
-              <PeopleLink person={person} />
+              <PersonLink person={person} />
             </td>
 
             <td>{person.sex}</td>
@@ -40,14 +40,14 @@ export const PeopleTabs = ({ people }: Props) => {
 
             <td>
               {person.mother ? (
-                <PeopleLink person={person.mother} />
+                <PersonLink person={person.mother} />
               ) : (
                 person.motherName || '-'
               )}
             </td>
             <td>
               {person.father ? (
-                <PeopleLink person={person.father} />
+                <PersonLink person={person.father} />
               ) : (
                 person.fatherName || '-'
               )}
