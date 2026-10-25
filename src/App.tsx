@@ -1,6 +1,5 @@
-
 import './App.scss';
-import { Link, NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import classNames from 'classnames';
 
 export const App = () => (
@@ -14,15 +13,23 @@ export const App = () => (
       <div className="container">
         <div className="navbar-brand">
           <NavLink
-          to="/"
-            className={({ isActive }) => classNames('navbar-item', {'has-background-grey-lighter': isActive})}
+            to="/"
+            className={({ isActive }) =>
+              classNames('navbar-item', {
+                'has-background-grey-lighter': isActive,
+              })
+            }
           >
             Home
           </NavLink>
 
           <NavLink
             to="/people"
-            className={({ isActive }) => classNames('navbar-item', {'has-background-grey-lighter': isActive})}
+            className={({ isActive }) =>
+              classNames('navbar-item', {
+                'has-background-grey-lighter': isActive,
+              })
+            }
           >
             People
           </NavLink>
@@ -33,7 +40,7 @@ export const App = () => (
     <main className="section">
       <div className="container">
         <Outlet />
-          </div>
+      </div>
     </main>
   </div>
 );
